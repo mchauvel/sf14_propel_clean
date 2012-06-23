@@ -1,0 +1,11 @@
+propel:
+  author:
+    id:                         ~
+    first_name: 				{ type: varchar(30), required: true }
+    last_name:                  { type: varchar(30), required: true }
+  book:
+    id:                         ~
+    author_id: 					{ type: integer, foreignTable: author, foreignReference: id, onDelete: setnull }
+    name:                       { type: varchar(20), required: true }
+    description:                { type: longvarchar }
+    
